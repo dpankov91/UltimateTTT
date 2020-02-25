@@ -1,6 +1,6 @@
-package game;
+package ulitmatettt.bll.game;
 
-import field.IField;
+import ulitmatettt.bll.field.IField;
 
 /**
  *
