@@ -1,7 +1,7 @@
-package bot;
+package ulitmatettt.bll.bot;
 
-import game.IGameState;
-import move.IMove;
+import ulitmatettt.bll.game.IGameState;
+import ulitmatettt.bll.move.IMove;
 
 /**
  *
