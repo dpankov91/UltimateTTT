@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #737373;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="6.0" layoutY="501.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <JFXButton layoutX="350.0" layoutY="513.0" prefHeight="48.0" prefWidth="100.0" text="Exit" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Button layoutX="326.0" layoutY="404.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="146.0" text="START">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ToggleButton layoutX="139.0" layoutY="156.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="166.0" text="Player vs Player" />
+      <ToggleButton layoutX="326.0" layoutY="156.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="146.0" text="Player vs Skynet" />
+      <ToggleButton layoutX="489.0" layoutY="156.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="146.0" text="Terminator vs Skynet" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="139.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="166.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="326.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="489.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="6.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="805.0" />
+      <Label layoutX="277.0" layoutY="34.0" prefHeight="70.0" prefWidth="257.0" text="Ultimate Tic-Tac-Toe">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="121.0" fitWidth="146.0" layoutX="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/CrossBetter.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="146.0" layoutX="535.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/CircleBetter.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
