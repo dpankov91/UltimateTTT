@@ -23,7 +23,7 @@
                   <Insets bottom="100.0" top="100.0" />
                </StackPane.margin>
                <children>
-                  <GridPane hgap="20.0" prefHeight="600.0" prefWidth="868.0" vgap="20.0">
+                  <GridPane fx:id="microBoard" hgap="20.0" prefHeight="600.0" prefWidth="868.0" vgap="20.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
