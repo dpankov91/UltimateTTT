@@ -37,6 +37,16 @@
                      <children>
                         <StackPane prefHeight="150.0" prefWidth="200.0">
                            <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0">
+                                 <image>
+                                    <Image url="@img/CircleBetter.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="177.0">
+                                 <image>
+                                    <Image url="@img/CrossBetter.png" />
+                                 </image>
+                              </ImageView>
                               <GridPane hgap="5.0" style="-fx-background-color: #0d0d0d;" vgap="5.0">
                                 <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -159,6 +169,16 @@
                                     </StackPane>
                                  </children>
                               </GridPane>
+                              <ImageView fitHeight="200.0" fitWidth="177.0">
+                                 <image>
+                                    <Image url="@img/CrossBetter.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="200.0" fitWidth="200.0">
+                                 <image>
+                                    <Image url="@img/CircleBetter.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </StackPane>
                         <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #0d0d0d;" GridPane.columnIndex="2">
