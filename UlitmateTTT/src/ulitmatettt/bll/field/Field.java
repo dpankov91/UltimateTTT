@@ -8,15 +8,13 @@ package ulitmatettt.bll.field;
 import java.util.ArrayList;
 import java.util.List;
 import ulitmatettt.bll.move.IMove;
+import ulitmatettt.bll.move.Move;
 
 /**
  *
  * @author dpank
  */
 public class Field implements IField
-            
-    
-
 {
 
     private String[][] board;
@@ -32,8 +30,31 @@ public class Field implements IField
     
     @Override
     public void clearBoard() {
-         clearBoard();
+         clearMicroboard();
          clearMacroboard();
+    }
+    
+    
+     private void clearMicroboard()
+    {
+        for(int x = 0; x < board.length; x++)
+        {
+            for(int y = 0; y < board[x].length; y++)
+            {
+                board[x][y] = EMPTY_FIELD;
+            }
+        }
+    }
+    
+    private void clearMacroboard()
+    {
+        for(int x = 0; x < macroboard.length; x++)
+        {
+            for(int y = 0; y < macroboard[x].length; y++)
+            {
+                macroboard[x][y] = AVAILABLE_FIELD;
+            }
+        }
     }
 
     @Override
@@ -45,6 +66,24 @@ public class Field implements IField
                     availableMoves.addAll(getAvailableMovesFromMicroboard(x, y));
                 }
                     
+            }
+        }
+        return availableMoves;
+    }
+    
+    private List<IMove> getAvailableMovesFromMicroboard(int microboardXPosition, int microboardYPosition)
+    {
+        List<IMove> availableMoves = new ArrayList();
+        int startingXPosition = microboardXPosition*3;
+        int startingYPosition = microboardYPosition*3;
+        for(int x = startingXPosition; x < startingXPosition+3; x++)
+        {
+            for(int y = startingYPosition; y < startingYPosition+3; y++)
+            {
+                if(board[x][y].equals(EMPTY_FIELD))
+                {
+                    availableMoves.add(new Move(x, y));
+                }
             }
         }
         return availableMoves;
@@ -81,7 +120,7 @@ public class Field implements IField
         }
         return true;
        }
-    }
+
 
     @Override
     public Boolean isInActiveMicroboard(int x, int y) {
@@ -92,14 +131,14 @@ public class Field implements IField
  
     @Override
     public String[][] getBoard() {
-         this.board = board;
+         return board;
     }
 
     @Override
     public String[][] getMacroboard() {
         return macroboard;
         }
-    }
+    
 
     @Override
     public void setBoard(String[][] board) 
