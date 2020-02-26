@@ -134,7 +134,7 @@ public class GameManager {
     private void updateBoard(IMove move)
     {
        //TODO: Update the board to the new state 
-        throw new UnsupportedOperationException("Not supported yet."); 
+       
     }
     
     private void updateMacroboard(IMove move)

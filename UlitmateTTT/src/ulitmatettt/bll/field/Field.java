@@ -15,6 +15,17 @@ import ulitmatettt.bll.move.IMove;
 public class Field implements IField
 {
 
+    private String[][] board;
+    private String[][] macroboard;
+
+    public Field() {
+        board = new String[9][9];
+        macroboard = new String [3][3];
+        clearBoard();
+    }
+
+     
+    
     @Override
     public void clearBoard() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -44,7 +55,7 @@ public class Field implements IField
     public Boolean isInActiveMicroboard(int x, int y) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+ 
     @Override
     public String[][] getBoard() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -56,13 +67,18 @@ public class Field implements IField
     }
 
     @Override
-    public void setBoard(String[][] board) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setBoard(String[][] board) 
+    {
+       this.board = board;
     }
 
     @Override
-    public void setMacroboard(String[][] macroboard) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setMacroboard(String[][] macroboard) 
+    {
+        this.macroboard = macroboard;
     }
+    
+      
+           
     
 }
