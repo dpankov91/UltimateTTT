@@ -13,6 +13,9 @@ import ulitmatettt.bll.move.IMove;
  * @author dpank
  */
 public class Field implements IField
+            
+    
+
 {
 
     @Override
@@ -37,22 +40,36 @@ public class Field implements IField
 
     @Override
     public boolean isFull() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       for(int x = 0; x < macroboard.length; x++)
+        {
+            for(int y = 0; y < macroboard[x].length; y++)
+            {
+                if(macroboard[x][y].equals(EMPTY_FIELD) || macroboard[x][y].equals(AVAILABLE_FIELD))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+       }
     }
 
     @Override
     public Boolean isInActiveMicroboard(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          int macroboardXPosition = x/3;
+        int macroboardYPosition = y/3;
+        return macroboard[macroboardXPosition][macroboardYPosition].equals(AVAILABLE_FIELD);
     }
 
     @Override
     public String[][] getBoard() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         this.board = board;
     }
 
     @Override
     public String[][] getMacroboard() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return macroboard;
+        }
     }
 
     @Override
