@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 Feb 2020, 16:57:02
+    Author     : Tienesh
+*/
+/*Toggle button css*/
+.toggle-button
+{
+ -fx-border-width: 1; 
+ -fx-font:'Comic Sans Ms';
+ 
+}
+
+.toggle-button:hover
+{
+    -fx-background-color: grey;
+    -fx-border-color: blue;
+    -fx-border-width: 1;
+
+}
+
+.toggle-button:selected 
+{
+    -fx-text-fill:white;
+}
+
+/*Button css*/
+.button:pressed
+{
+    -fx-background-color:#212122;
+    -fx-text-fill:white;   
+}
+
+.button:hover{
+    -fx-background-color: darkgrey;
+}
