@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #737373;" stylesheets="@css/MainMenuStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #737373;" stylesheets="@css/MainMenuStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ulitmatettt.gui.view.MainMenuController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="6.0" layoutY="501.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
       <JFXButton fx:id="exitButton" layoutX="350.0" layoutY="513.0" onAction="#clickExit" prefHeight="48.0" prefWidth="100.0" text="Exit" textFill="WHITE">
