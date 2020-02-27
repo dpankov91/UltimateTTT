@@ -8,37 +8,41 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #737373;" stylesheets="@css/MainMenuStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="6.0" layoutY="501.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
-      <JFXButton layoutX="350.0" layoutY="513.0" prefHeight="48.0" prefWidth="100.0" text="Exit" textFill="WHITE">
+      <JFXButton fx:id="exitButton" layoutX="350.0" layoutY="513.0" onAction="#clickExit" prefHeight="48.0" prefWidth="100.0" text="Exit" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <Button layoutX="326.0" layoutY="404.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="146.0" text="START">
+      <Button fx:id="startButton" layoutX="326.0" layoutY="404.0" mnemonicParsing="false" onAction="#clickStart" prefHeight="70.0" prefWidth="146.0" text="START">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <ToggleButton layoutX="139.0" layoutY="156.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="166.0" text="Player vs Player">
+      <ToggleButton fx:id="btnPlayerVsPlayer" layoutX="138.0" layoutY="156.0" mnemonicParsing="false" onAction="#clickPlayerVsPlayer" prefHeight="70.0" prefWidth="166.0" text="Player vs Player">
          <toggleGroup>
             <ToggleGroup fx:id="GameMode" />
          </toggleGroup>
          <font>
-            <Font name="Comic Sans MS" size="17.0" />
+            <Font name="Comic Sans MS" size="16.0" />
          </font></ToggleButton>
-      <ToggleButton layoutX="326.0" layoutY="156.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="146.0" stylesheets="@css/MainMenuStyle.css" text="Player vs Skynet" toggleGroup="$GameMode">
+      <ToggleButton fx:id="btnPlayerVsBot" layoutX="326.0" layoutY="156.0" mnemonicParsing="false" onAction="#clickPlayerVsBot" prefHeight="70.0" prefWidth="146.0" stylesheets="@css/MainMenuStyle.css" text="Player vs Skynet" toggleGroup="$GameMode">
          <font>
-            <Font size="17.0" />
+            <Font name="Comic Sans MS" size="16.0" />
          </font></ToggleButton>
-      <ToggleButton layoutX="489.0" layoutY="156.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="146.0" text="Terminator vs Skynet" toggleGroup="$GameMode" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="139.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="166.0" />
+      <ToggleButton fx:id="btnAIvsAI" layoutX="506.0" layoutY="156.0" mnemonicParsing="false" onAction="#clickAIvsAI" prefHeight="70.0" prefWidth="186.0" text="Terminator vs Skynet" toggleGroup="$GameMode">
+         <font>
+            <Font name="Comic Sans MS" size="16.0" />
+         </font></ToggleButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="138.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="166.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="326.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="146.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="489.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="146.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="506.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="186.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="6.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="805.0" />
       <Label layoutX="277.0" layoutY="34.0" prefHeight="70.0" prefWidth="257.0" text="Ultimate Tic-Tac-Toe">
          <font>
@@ -52,8 +56,10 @@
       </ImageView>
       <ImageView fitHeight="128.0" fitWidth="146.0" layoutX="535.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/CircleBetter.png" />
+            <Image url="@../img/CircleBetter2.png" />
          </image>
       </ImageView>
+      <StackPane fx:id="stcFirstOption" layoutX="3.0" layoutY="251.0" maxHeight="100.0" maxWidth="800.0" prefHeight="64.0" prefWidth="800.0" />
+      <StackPane fx:id="stcSecondOption" layoutX="6.0" layoutY="323.0" maxHeight="100.0" maxWidth="800.0" prefHeight="64.0" prefWidth="800.0" />
    </children>
 </AnchorPane>
