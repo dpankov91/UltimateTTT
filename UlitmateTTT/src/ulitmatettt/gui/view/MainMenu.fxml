@@ -40,9 +40,9 @@
          <font>
             <Font name="Comic Sans MS" size="16.0" />
          </font></ToggleButton>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="138.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="166.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="326.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="146.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="506.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="186.0" />
+      <Rectangle fx:id="rctPlayerVsPlayer" arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="138.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="166.0" />
+      <Rectangle fx:id="rcPlayerVsAI" arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="326.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="146.0" />
+      <Rectangle fx:id="rctBotVsBot" arcHeight="5.0" arcWidth="5.0" fill="#8fc8ff" height="6.0" layoutX="506.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="186.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="6.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="805.0" />
       <Label layoutX="277.0" layoutY="34.0" prefHeight="70.0" prefWidth="257.0" text="Ultimate Tic-Tac-Toe">
          <font>
