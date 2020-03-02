@@ -16,6 +16,10 @@ import ulitmatettt.bll.move.IMove;
  */
 public class GameManager {
 
+    public boolean hasWinner() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Three different game modes.
      */
@@ -31,6 +35,7 @@ public class GameManager {
     private GameMode mode = GameMode.HumanVsHuman;
     private IBot bot = null;
     private IBot bot2 = null;
+     private boolean isGameOver = false;
 
     /**
      * Set's the currentState so the game can begin. Game expected to be played
@@ -89,7 +94,7 @@ public class GameManager {
         //Update the currentState
         updateBoard(move);
         updateMacroboard(move);
-
+        
         //Update currentPlayer
         currentPlayer = (currentPlayer + 1) % 2;
         currentState.setMoveNumber(currentState.getMoveNumber()+1);
@@ -163,5 +168,15 @@ public class GameManager {
         currentState.getField().getMacroboard()[macroX][macroY] = IField.AVAILABLE_FIELD;
         }
     }
+    
+     public int getCurrentPlayer()
+    {
+        return currentPlayer;
+    }
+     
+     public boolean isGameOver() 
+     {
+        return isGameOver;    
+     }
 }
 

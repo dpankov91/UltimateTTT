@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="850.0" style="-fx-background-color: #737373;" stylesheets="@css/GameViewStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ulitmatettt.gui.view.GameViewController">
    <children>
-      <StackPane layoutX="1.0" layoutY="76.0" prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #737373;">
+      <StackPane fx:id="mainPane" layoutX="1.0" layoutY="76.0" prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #737373;">
          <children>
             <StackPane prefHeight="600.0" prefWidth="850.0" stylesheets="@css/GameViewStyle.css">
                <StackPane.margin>
