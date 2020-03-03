@@ -63,7 +63,7 @@ public class GameViewController implements Initializable {
     /*@FXML
     private void clickOnField(ActionEvent event) {
         if (performPlayerMove(event)) {
-            if (mode == GameMode.HumanVsBot) 
+            if (mode == GameMode.HumanVsBot) {}
             
         }
     }*/
@@ -152,7 +152,11 @@ public class GameViewController implements Initializable {
     private void updateBoard(int currentPlayer, int fieldXPosition, int fieldYPosition) 
     {
         Button field = board.get(fieldXPosition).get(fieldYPosition);
+
         ImageView imageView = new ImageView(getPlayerMarker(currentPlayer));
+
+        ImageView imageView = new ImageView();
+
         field.setGraphic(imageView);
     }
 
@@ -164,7 +168,7 @@ public class GameViewController implements Initializable {
 
     private void updateMicroboardState(int currentPlayer, int fieldXPosition, int fieldYPosition) 
     {
-        if (model.isMicroboardWon(fieldXPosition / 3, fieldYPosition / 3)) {
+        if (model.isMicroboardWon()) {
             GridPane microboard = (GridPane) board.get(fieldXPosition).get(fieldYPosition).getParent().getParent();
             setMicroboardToWon(currentPlayer, microboard);
         }
@@ -214,6 +218,24 @@ public class GameViewController implements Initializable {
             activePointer = 1;
         }
         transition.play();
+    }
+
+
+        
+
+        
+        transition.play();
+    }
+
+    private void setMicroboardToWon(int currentPlayer, GridPane microboard) {
+        StackPane microboardField = (StackPane) microboard.getParent();
+        microboard.setVisible(false);
+        microboardField.setMouseTransparent(true);
+    }
+
+    private void setGameOver(int currentPlayer) {
+
+
     }
 
 

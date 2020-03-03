@@ -39,7 +39,12 @@ public class MainMenuController implements Initializable {
     private StackPane stcFirstOption;
     @FXML
     private StackPane stcSecondOption;
-
+    
+    public MainMenuController()
+    {
+        
+    }
+    
     /**
      * Initializes the controller class.
      */
@@ -54,6 +59,7 @@ public class MainMenuController implements Initializable {
 
     @FXML
     private void clickStart(ActionEvent event) {
+        
     }
 
     @FXML
