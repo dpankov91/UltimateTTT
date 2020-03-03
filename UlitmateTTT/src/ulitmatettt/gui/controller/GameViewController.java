@@ -153,7 +153,7 @@ public class GameViewController implements Initializable {
     {
         Button field = board.get(fieldXPosition).get(fieldYPosition);
 
-        ImageView imageView = new ImageView(getPlayerMarker(currentPlayer));
+        ImageView imageView = new ImageView(getPlayerMa3rker(currentPlayer));
 
         ImageView imageView = new ImageView();
 
