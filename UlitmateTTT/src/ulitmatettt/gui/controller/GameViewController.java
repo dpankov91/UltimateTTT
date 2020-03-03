@@ -60,13 +60,13 @@ public class GameViewController implements Initializable {
         model = new GameModel();
     }
 
-    @FXML
+    /*@FXML
     private void clickOnField(ActionEvent event) {
         if (performPlayerMove(event)) {
             if (mode == GameMode.HumanVsBot) 
             
         }
-    }
+    }*/
 
     private boolean performPlayerMove(ActionEvent event) {
         int currentPlayer = model.getCurrentPlayer();
@@ -152,7 +152,7 @@ public class GameViewController implements Initializable {
     private void updateBoard(int currentPlayer, int fieldXPosition, int fieldYPosition) 
     {
         Button field = board.get(fieldXPosition).get(fieldYPosition);
-        ImageView imageView = new ImageView(getPlayerMarker(player));
+        ImageView imageView = new ImageView(getPlayerMarker(currentPlayer));
         field.setGraphic(imageView);
     }
 
@@ -200,8 +200,7 @@ public class GameViewController implements Initializable {
         ParallelTransition transition = new ParallelTransition();
 
         List<Node> cross = new ArrayList();
-        cross.add(imgCrossPartOne);
-        cross.add(imgCrossPartTwo);
+        cross.add(imgCross);
 
         if (currentPlayer == 0 && activePointer == 1) {
             ParallelTransition showTransition = AnimationUtil.createShowCrossAnimation(cross);
@@ -217,7 +216,8 @@ public class GameViewController implements Initializable {
         transition.play();
     }
 
-    private void setMicroboardToWon(int currentPlayer, GridPane microboard) {
+    private void setMicroboardToWon(int currentPlayer, GridPane microboard) 
+    {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -226,6 +226,14 @@ public class GameViewController implements Initializable {
     }
 
     private void setDraw() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getPlayerMarker(int currentPlayer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void updateGameboard(int currentPlayer, int i, int i0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

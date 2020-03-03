@@ -12,9 +12,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import ulitmatettt.gui.model.GameModel;
 
 /**
  * FXML Controller class
@@ -39,25 +43,35 @@ public class MainMenuController implements Initializable {
     private StackPane stcFirstOption;
     @FXML
     private StackPane stcSecondOption;
+    
+    private GameModel model;
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) 
+    {
+        model = new GameModel();
     }    
 
     @FXML
-    private void clickExit(ActionEvent event) {
+    private void clickExit(ActionEvent event) 
+    {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
-    private void clickStart(ActionEvent event) {
+    private void clickStart(ActionEvent event) 
+    {
+        
     }
 
     @FXML
-    private void clickPlayerVsPlayer(ActionEvent event) {
+    private void clickPlayerVsPlayer(ActionEvent event) 
+    {
+        
     }
 
     @FXML
