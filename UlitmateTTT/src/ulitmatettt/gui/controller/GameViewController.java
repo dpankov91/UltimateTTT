@@ -63,7 +63,7 @@ public class GameViewController implements Initializable {
     @FXML
     private void clickOnField(ActionEvent event) {
         if (performPlayerMove(event)) {
-            if (mode == GameMode.HumanVsBot) 
+            if (mode == GameMode.HumanVsBot) {}
             
         }
     }
@@ -152,7 +152,7 @@ public class GameViewController implements Initializable {
     private void updateBoard(int currentPlayer, int fieldXPosition, int fieldYPosition) 
     {
         Button field = board.get(fieldXPosition).get(fieldYPosition);
-        ImageView imageView = new ImageView(getPlayerMarker(player));
+        ImageView imageView = new ImageView();
         field.setGraphic(imageView);
     }
 
@@ -164,7 +164,7 @@ public class GameViewController implements Initializable {
 
     private void updateMicroboardState(int currentPlayer, int fieldXPosition, int fieldYPosition) 
     {
-        if (model.isMicroboardWon(fieldXPosition / 3, fieldYPosition / 3)) {
+        if (model.isMicroboardWon()) {
             GridPane microboard = (GridPane) board.get(fieldXPosition).get(fieldYPosition).getParent().getParent();
             setMicroboardToWon(currentPlayer, microboard);
         }
@@ -203,17 +203,7 @@ public class GameViewController implements Initializable {
         cross.add(imgCross);
         
 
-        if (currentPlayer == 0 && activePointer == 1) {
-            ParallelTransition showTransition = AnimationUtil.createShowCrossAnimation(cross);
-            ParallelTransition hideTransition = AnimationUtil.createHideCircleAnimation(imgCircle);
-            transition.getChildren().addAll(showTransition, hideTransition);
-            activePointer = 0;
-        } else if (currentPlayer == 1 && activePointer == 0) {
-            ParallelTransition hideTransition = AnimationUtil.createHideCrossAnimation(cross);
-            ParallelTransition showTransition = AnimationUtil.createShowCircleAnimation(imgCircle);
-            transition.getChildren().addAll(showTransition, hideTransition);
-            activePointer = 1;
-        }
+        
         transition.play();
     }
 
@@ -221,20 +211,11 @@ public class GameViewController implements Initializable {
         StackPane microboardField = (StackPane) microboard.getParent();
         microboard.setVisible(false);
         microboardField.setMouseTransparent(true);
-        ImageView imageView = new ImageView(getPlayerMarkerMicroboard(microboardWinner));
-        microboardField.getChildren().add(imageView);
-        ParallelTransition transition = AnimationUtil.createMicroboardAnimation(imageView);
-        transition.play();
     }
 
     private void setGameOver(int currentPlayer) {
-        grdGameboard.setDisable(true);
-        incrementPlayerScore(winner);
-        if(model.getGameMode() != GameMode.BotVsBot)
-        {
-            showGameOverAnimation(getPlayerMarker(winner));
-            showSlideOptionButtons();
-        }
+
+
     }
 
     private void setDraw() {

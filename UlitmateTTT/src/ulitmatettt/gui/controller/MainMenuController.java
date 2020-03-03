@@ -8,7 +8,6 @@ package ulitmatettt.gui.controller;
 import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,7 +15,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.StackPane;
-import ulitmatettt.gui.model.GameModel;
 
 /**
  * FXML Controller class
@@ -44,7 +42,7 @@ public class MainMenuController implements Initializable {
     
     public MainMenuController()
     {
-        model = GameModel.getInstance();
+        
     }
     
     /**
