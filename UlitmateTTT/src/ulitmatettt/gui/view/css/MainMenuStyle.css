@@ -43,3 +43,13 @@ and open the template in the editor.
 .button{
     -fx-background-color:#3399ff;
 }
+
+.combo-box{
+    -fx-text-alignment:center;
+    -fx-background-color:#3399ff;
+}
+
+.textfield{
+    ¨-fx-background-color: #3399ff;
+     
+}
