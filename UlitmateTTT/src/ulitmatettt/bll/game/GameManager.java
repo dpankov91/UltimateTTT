@@ -35,7 +35,7 @@ public class GameManager {
     private GameMode mode = GameMode.HumanVsHuman;
     private IBot bot = null;
     private IBot bot2 = null;
-    private boolean isGameOver = false;
+     private boolean isGameOver = false;
 
     /**
      * Set's the currentState so the game can begin. Game expected to be played

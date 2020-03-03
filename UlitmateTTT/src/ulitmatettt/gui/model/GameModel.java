@@ -66,17 +66,7 @@ public class GameModel {
     {
         return !game.hasWinner() && game.isGameOver();    
     }
-
-    /*public boolean isMicroboardWon(int microboardXPosition, int microboardYPosition) 
-    {
-        String microboardValue = gameState.getField().getMacroboard()[microboardXPosition][microboardYPosition];
-        return microboardValue.equals(game.PLAYER_0_MARKER) || microboardValue.equals(game.PLAYER_1_MARKER);    
-    }
-    */
-
-    public boolean isMicroboardWon(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
     
     
