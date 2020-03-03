@@ -200,17 +200,17 @@ public class GameViewController implements Initializable {
         ParallelTransition transition = new ParallelTransition();
 
         List<Node> cross = new ArrayList();
-        cross.add(imgCrossPartOne);
-        cross.add(imgCrossPartTwo);
+        cross.add(imgCross);
+        
 
         if (currentPlayer == 0 && activePointer == 1) {
             ParallelTransition showTransition = AnimationUtil.createShowCrossAnimation(cross);
-            ParallelTransition hideTransition = AnimationUtil.createHideCircleAnimation(imgCirclePartOne, imgCirclePartTwo);
+            ParallelTransition hideTransition = AnimationUtil.createHideCircleAnimation(imgCircle);
             transition.getChildren().addAll(showTransition, hideTransition);
             activePointer = 0;
         } else if (currentPlayer == 1 && activePointer == 0) {
             ParallelTransition hideTransition = AnimationUtil.createHideCrossAnimation(cross);
-            ParallelTransition showTransition = AnimationUtil.createShowCircleAnimation(imgCirclePartOne, imgCirclePartTwo);
+            ParallelTransition showTransition = AnimationUtil.createShowCircleAnimation(imgCircle);
             transition.getChildren().addAll(showTransition, hideTransition);
             activePointer = 1;
         }
@@ -218,11 +218,23 @@ public class GameViewController implements Initializable {
     }
 
     private void setMicroboardToWon(int currentPlayer, GridPane microboard) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        StackPane microboardField = (StackPane) microboard.getParent();
+        microboard.setVisible(false);
+        microboardField.setMouseTransparent(true);
+        ImageView imageView = new ImageView(getPlayerMarkerMicroboard(microboardWinner));
+        microboardField.getChildren().add(imageView);
+        ParallelTransition transition = AnimationUtil.createMicroboardAnimation(imageView);
+        transition.play();
     }
 
     private void setGameOver(int currentPlayer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        grdGameboard.setDisable(true);
+        incrementPlayerScore(winner);
+        if(model.getGameMode() != GameMode.BotVsBot)
+        {
+            showGameOverAnimation(getPlayerMarker(winner));
+            showSlideOptionButtons();
+        }
     }
 
     private void setDraw() {
