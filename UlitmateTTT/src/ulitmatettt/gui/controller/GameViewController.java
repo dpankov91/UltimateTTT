@@ -205,6 +205,8 @@ public class GameViewController implements Initializable {
 
         List<Node> cross = new ArrayList();
         cross.add(imgCross);
+        int activePointer = 0;
+        int currentPlayer = 0;
 
         if (currentPlayer == 0 && activePointer == 1) {
             ParallelTransition showTransition = AnimationUtil.createShowCrossAnimation(cross);
@@ -225,6 +227,36 @@ public class GameViewController implements Initializable {
 
         
         transition.play();
+
+    private String getPlayerMarker(int currentPlayer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setMicroboardToWon(int currentPlayer, GridPane microboard) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setGameOver(int currentPlayer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setDraw() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class AnimationUtil {
+
+        private static ParallelTransition createShowCrossAnimation(List<Node> cross) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private static ParallelTransition createHideCrossAnimation(List<Node> cross) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public AnimationUtil() {
+        }
+    }
     }
 
     private void setMicroboardToWon(int currentPlayer, GridPane microboard) {
